@@ -212,7 +212,7 @@ class AutoGPTPluginTemplate(AbstractSingleton, metaclass=Singleton):
 
     @abc.abstractmethod
     def can_handle_chat_completion(
-        self, messages: Dict[Any, Any], model: str, temperature: float, max_tokens: int
+        self, messages: List[Message], model: str, temperature: float, max_tokens: int
     ) -> bool:
         """This method is called to check that the plugin can
           handle the chat_completion method.
